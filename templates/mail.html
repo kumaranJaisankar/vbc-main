@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Including the bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+  <style>
+    /* #customers td {
+        text-align: center;
+      } */
+    /* #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #a93333;
+      color: white;
+      text-align: center;
+    } */
+    #customers tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    #customers tr:hover {
+      background-color: #ddd;
+    }
+    /* #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    } */
+    /* #customers td,
+    #customers th {
+      border: 2px solid black;
+      padding: 8px;
+    } */
+    .alignright {
+      float: right;
+    }
+    .btn-primary {
+      background-color: #e5752b;
+    }
+    .Portfolio {
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+    }
+    #textbox {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    /* .logo {
+      height: 100px;
+      width: 200px;
+    } */
+    /* .full-width-image {
+      width: 100vw;   
+      position: relative;
+      left: 49%;
+      margin-left: -50vw;
+    } */
+
+    /* .full-width-image img {
+      width: 100%;
+      height: 500px;
+    } */
+  </style>
+
+  <body>
+    <!-- <nav class="navbar navbar-expand-sm">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="config.html">
+            <img
+              class="logo"
+              src="logo.jpg"
+              style="height: 100px; width: 200px"
+            />
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section>
+      <div class="container">
+        <div
+          class="full-width-image"
+          style="
+            width: 100vw;
+            position: relative;
+            left: 49%;
+            margin-left: -50vw;
+          "
+        >
+          <img
+            src="stockmarket.jpg"
+            alt=""
+            style="width: 100%; height: 500px"
+          />
+        </div>
+      </div>
+    </section>
+    <br /> -->
+    <section>
+      <div id="textbox">
+        <p>
+          Thank you for Showing interest in VBC on Fiber 
+        </p>
+        <p>
+          Below are the list of Packages we are currently offering to our customers
+        </p>
+      </div>
+    </section>
+    <section>
+      <h3 class="Portfolio">
+        VBC on Fiber
+      </h3>
+    </section>
+
+    <br />
+    <section>
+      <table
+        id="customers"
+        style="
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        <tr>
+          <th
+            style="
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #a93333;
+              color: white;
+              text-align: center;
+              border: 2px solid black;
+              padding: 8px;
+            "
+          >
+            Plan Name
+          </th>
+          <th
+            style="
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #a93333;
+              color: white;
+              text-align: center;
+              border: 2px solid black;
+              padding: 8px;
+            "
+          >
+            Upload/Download
+          </th>
+          <th
+            style="
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #a93333;
+              color: white;
+              text-align: center;
+              border: 2px solid black;
+              padding: 8px;
+            "
+          >
+            Limit
+          </th>
+          <th
+          style="
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #a93333;
+            color: white;
+            text-align: center;
+            border: 2px solid black;
+            padding: 8px;
+          "
+        >
+          Cost
+        </th>          
+        </tr>
+        {% for i in data %}
+        <tr>
+          <td contenteditable="true" style="text-align: center; border: 2px solid black; padding: 8px">
+            {{i.package_name}}
+          </td>
+          <td contenteditable="true" style="text-align: center; border: 2px solid black; padding: 8px">
+            {{i.upload_speed}}/{{i.download_speed}}
+          </td>
+          <td contenteditable="true" style="text-align: center; border: 2px solid black; padding: 8px">
+            {{i.fup_limit}}
+          </td>
+          <td contenteditable="true" style="text-align: center; border: 2px solid black; padding: 8px">
+            {{i.total_plan_cost}}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+      <br />
+      <!-- <table
+        id="customers"
+        style="
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        <tr>
+          <th
+            style="
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #a93333;
+              color: white;
+              text-align: center;
+              border: 2px solid black;
+              padding: 8px;
+            "
+          >
+            Scrip Name
+          </th>
+          <th
+            style="
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #a93333;
+              color: white;
+              text-align: center;
+              border: 2px solid black;
+              padding: 8px;
+            "
+          >
+            Scrip ID
+          </th>
+          <th
+            style="
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #a93333;
+              color: white;
+              text-align: center;
+              border: 2px solid black;
+              padding: 8px;
+            "
+          >
+            Holdging Quantity
+          </th>
+          <th
+            style="
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #a93333;
+              color: white;
+              text-align: center;
+              border: 2px solid black;
+              padding: 8px;
+            "
+          >
+            Holding Rate
+          </th>
+          <th
+            style="
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #a93333;
+              color: white;
+              text-align: center;
+              border: 2px solid black;
+              padding: 8px;
+            "
+          >
+            Total Cost
+          </th>
+          <th
+            style="
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #a93333;
+              color: white;
+              text-align: center;
+              border: 2px solid black;
+              padding: 8px;
+            "
+          >
+            Current Market Price
+          </th>
+          <th
+            style="
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #a93333;
+              color: white;
+              text-align: center;
+              border: 2px solid black;
+              padding: 8px;
+            "
+          >
+            Total Amount
+          </th>
+          <th
+            style="
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #a93333;
+              color: white;
+              text-align: center;
+              border: 2px solid black;
+              padding: 8px;
+            "
+          >
+            Profit/Loss
+          </th>
+          <th
+            style="
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #a93333;
+              color: white;
+              text-align: center;
+              border: 2px solid black;
+              padding: 8px;
+            "
+          >
+            Profit/Loss %
+          </th>
+        </tr>
+        {% for i in data %}
+        <tr>
+          <!-- <td style="text-align: center; border: 2px solid black; padding: 8px">
+            BALAJIEQUITIES
+          </td> -->
+          <!-- <td style="text-align: center; border: 2px solid black; padding: 8px">
+            {{i.scriptname}}
+          </td>
+          <td style="text-align: center; border: 2px solid black; padding: 8px">
+            {{i.td_scripcd}}
+          </td>
+          <td style="text-align: center; border: 2px solid black; padding: 8px">
+            {{i.NetQty}}
+          </td>
+          <td style="text-align: center; border: 2px solid black; padding: 8px">
+            {{i.Market_rate}}
+          </td>
+          <td style="text-align: center; border: 2px solid black; padding: 8px">
+            {{i.Total_mkt_rt}}
+          </td>
+          <td style="text-align: center; border: 2px solid black; padding: 8px">
+            {{i.Current_rate}}
+          </td>
+          <td style="text-align: center; border: 2px solid black; padding: 8px">
+            {{i.Total_curt_rt}}
+          </td>
+          <td style="text-align: center; border: 2px solid black; padding: 8px">
+            {{i.PL}}
+          </td>
+          <td style="text-align: center; border: 2px solid black; padding: 8px">
+            {{i.PLper}}
+          </td> -->
+          <!-- <br/>
+          
+        </tr>
+        {% endfor %}
+      </table> --> -->
+    </section>
+    <br />
+    <!-- <section>
+      <div id="textbox">
+        <p>
+          balajiequities.com has pioneered a range of products and services that
+          help you grow your investments and achieve your financial goals with
+          ease. Taking it to next step, we are pleased to provide you updateson
+          stock in your demat.
+        </p>
+      <br/>
+        <p>
+          We once again thank you for choosing and look forward for a rewarding
+          and continued relationship
+        </p>
+      </div>
+    </section> -->
+    <br />
+
+    <!-- <section>
+      <div
+        class="balaji"
+        style="
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          background-color: black;
+          color: gray;
+          padding: 15px;
+          padding-right: 50px;
+          padding-left: 50px;
+          font-size: 15px;
+        "
+      >
+        <div class="btn-group alignleft">
+          <p>Warm Regards</p>
+          &nbsp;&nbsp;
+          <p>BALAJIEQUITIES</p>
+        </div>
+
+        <div class="btn-group alignright">
+          <p>balajiequities.com</p>
+        </div>
+      </div>
+    </section> -->
+    <!-- <section>
+      <div
+        class="footer"
+        style="
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          background-color: #e5752b;
+          color: white;
+          text-align: right;
+          padding: 15px;
+          padding-right: 50px;
+          font-size: 20px;
+        "
+      >
+        <i class="fa fa-facebook"></i>&nbsp;&nbsp;
+        <i class="fa fa-twitter"></i>&nbsp;&nbsp;
+        <i class="fa fa-youtube-play"></i>&nbsp;&nbsp;
+        <i class="fa fa-google"></i>&nbsp;&nbsp;
+      </div>
+    </section> -->
+  </body>
+</html>

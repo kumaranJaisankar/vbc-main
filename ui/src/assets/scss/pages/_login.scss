@@ -1,0 +1,436 @@
+/**=====================
+    25. Authentication CSS Start
+==========================**/
+
+.login-card {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #e4ecf8;
+  // box-shadow: 0 0 37px rgba(8, 21, 66, 0.05);d
+
+  // background: url('../../images/login/login_bg.jpg');
+  background-position: center;
+  padding: 30px 0;
+
+  .logo {
+    display: block;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .btn-showcase {
+    .btn {
+      line-height: 1;
+      padding: 10px 15px;
+      margin: 0;
+
+      & + .btn {
+        margin-left: 5px;
+      }
+
+      svg {
+        height: 16px;
+        vertical-align: bottom;
+      }
+      .icon-social-google {
+        margin: 0 6px;
+      }
+    }
+  }
+
+  .login-main {
+    // width: 600px !important;
+    // padding: 26px;
+    // padding-top: 11%;
+    border-radius: 10px;
+    // box-shadow: 0 0 37px rgba(8, 21, 66, 0.05);
+    margin: 0 auto;
+    background-color: $white;
+    .theme-form {
+      h4 {
+        margin-bottom: 5px;
+      }
+
+      label {
+        font-size: 20px;
+        letter-spacing: 0.4px;
+      }
+
+      .checkbox label::before {
+        background-color: $card-body-color;
+        border: 1px solid #dfdfdf;
+      }
+
+      .or {
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 65%;
+          height: 2px;
+          background-color: #f3f3ff;
+          top: 9px;
+          z-index: 0;
+          right: 0;
+        }
+      }
+
+      input {
+        background: #ffffff;
+        border: 1px solid #285295;
+        border-radius: 3px;
+        top: 2px;
+        position: relative;
+        left: -25px;
+
+        transition: all 0.3s ease;
+
+        &::-webkit-input-placeholder {
+          color: $light-text;
+        }
+
+        &:hover,
+        &:focus {
+          background: #ffffff;
+          border: 1px solid (#285295, 35%);
+          border-radius: 3px;
+          top: 2px;
+
+          position: relative;
+          left: -25px;
+
+          transition: all 0.3s ease;
+          // border: 1px solid lighten($semi-dark, 35%);
+          // box-shadow: none !important;
+          // transition: all 0.3s ease;
+        }
+      }
+
+      p {
+        margin-bottom: 25px;
+        font-size: 14px;
+        color: $dark-gray;
+      }
+
+      .form-group {
+        margin-bottom: 10px;
+        position: relative;
+      }
+
+      .link {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        font-size: 20px;
+      }
+    }
+    &.login-tab1 {
+      position: relative;
+      border-top-left-radius: 0;
+      // height: 100%;
+      margin-left: -3%;
+    }
+    &.login-tab {
+      position: relative;
+      border-top-left-radius: 0;
+      // height: 100%;
+
+      .nav-tabs {
+        border-bottom: none;
+        position: absolute;
+        background-color: $white;
+        box-shadow: 0 0 37px rgba(8, 21, 66, 0.05);
+        left: -70px;
+        top: 0;
+        margin-bottom: 0;
+        .nav-item {
+          .nav-link {
+            position: relative;
+            img {
+              filter: grayscale(100%);
+              width: 20px;
+              height: 20px;
+              transition: 0.5s;
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-color: transparent;
+              border-style: solid;
+              top: 12px;
+              border-width: 5px 0 5px 5px;
+              border-left-color: lighten($primary-color, 25%);
+              opacity: 0;
+              transform: scale(0);
+              color: #fff;
+              left: 14px;
+              z-index: 2;
+              transition: all 0.3s ease;
+            }
+            span {
+              position: absolute;
+              right: 0;
+              width: max-content;
+              text-align: right;
+              padding: 7px 10px;
+              display: block;
+              top: 0;
+              border-radius: 5px;
+              transform: scale(0);
+              transition: all 0.3s ease;
+              opacity: 0;
+              color: var(--theme-deafult);
+              background-color: lighten($primary-color, 25%);
+              box-shadow: 0 0 37px rgba(8, 21, 66, 0.1);
+            }
+
+            &:hover {
+              &:after {
+                opacity: 1;
+                transform: scale(1);
+                transition: all 0.3s ease;
+              }
+
+              span {
+                opacity: 1;
+                right: 56px;
+                transform: scale(1);
+                transition: all 0.3s ease;
+              }
+            }
+            &.active {
+              img {
+                filter: initial;
+                transition: 0.5s;
+              }
+            }
+          }
+        }
+      }
+      .tab-content {
+        // height: 458px;
+      }
+
+      .border-tab {
+        border-radius: 0;
+        &.nav-tabs {
+          .nav-item {
+            .nav-link {
+              border-bottom: none;
+              border-right: 2px solid transparent;
+              border-top-right-radius: 0;
+              &.active,
+              &.show,
+              &:focus {
+                border-right: 2px solid var(--theme-deafult);
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+      .auth-content {
+        text-align: center;
+        img {
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+.show-hide {
+  position: absolute;
+  top: 67px;
+  right: 20px;
+  transform: translateY(-50%);
+
+  span {
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--theme-deafult);
+
+    &.show {
+      &:before {
+        content: "show";
+      }
+    }
+
+    &:before {
+      content: "hide";
+    }
+  }
+}
+
+.needs-validation {
+  .invalid-feedback {
+    color: $dark-gray;
+  }
+
+  .show-hide {
+    right: 30px;
+  }
+
+  .invalid-tooltip {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+// css for login Screen by Marieya
+.signin_text {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 34px;
+  position: relative;
+  left: -3%;
+  // top: 20px;
+  color: #285295;
+  z-index: 1;
+}
+.footer {
+  // background-color: rgb(228, 236, 248) !important;
+  padding-left: 6%;
+  font-size: 14px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  // background-color: #e4ecf8 !important;
+}
+.lock {
+  position: absolute;
+  z-index: 1;
+  top: 19px;
+}
+.username_input {
+  padding-left: 15%;
+}
+
+.remember_text {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  position: relative;
+  top: -24px;
+  color: #285295;
+}
+.checkbox_img {
+  position: relative;
+  left: -14px;
+  top: -2px;
+}
+.question {
+  position: relative;
+  left: -11px;
+  top: -1px;
+}
+#loginBtn {
+  background-color: #285295 !important;
+  border-radius: 3px;
+  white-space: nowrap;
+  // font-size: medium;
+  // line-height: 22px;
+  font-size: 16px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  height: 40px;
+  /* width: 52px; */
+  /* height: 40px; */
+}
+.Newlogin-card {
+  box-shadow: 10px 10px 10px #cdcdcd;
+  background-color: #fff;
+  padding: 100px;
+  // padding: 11%;
+  // padding-left: 9%;
+  // padding-right: 9%;
+  // padding-top: 11%;
+  // padding-bottom: 11%;
+}
+.forgot-card {
+  // box-shadow: 0 0 37px rgba(8, 21, 66, 0.05);
+  // background-color: #fff;
+  // padding: 11%;
+  // padding-left: 9%;
+  // padding-right: 9%;
+  // padding-top: 11%;
+  // padding-bottom: 11%;
+  // width: 600px !important;
+}
+.welcome {
+  position: absolute;
+  top: 12%;
+  left: 23%;
+  width: 58%;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 68px;
+  /* identical to box height */
+
+  color: #003b8d;
+}
+.login_text {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #000000;
+}
+
+.orLogin {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+  left: 22%;
+  top: 35px;
+  position: relative;
+
+  color: #163828;
+}
+
+.fb {
+  background-color: #4f66a5;
+  border-radius: 3px;
+}
+.twitter {
+  background-color: #67c9fa;
+  border-radius: 3px;
+}
+.google {
+  background-color: #ca5040;
+  border-radius: 3px;
+}
+.linkdin {
+  background-color: #006599;
+  border-radius: 3px;
+}
+/**=====================
+    25. Authentication CSS Ends
+==========================**/
+
+.footer1 {
+  // position: fixed;
+  // left: 0;
+  // bottom: 0;
+  // width: 100%;
+  // background-color: rgb(228, 236, 248);
+  color: #484848;
+  // left:50px;
+  font-size: 14px;
+  text-align: center;
+}

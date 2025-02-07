@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %} 
+    <!-- Including the bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    hr.new1 {
+      border-top: 1px solid #222222;
+      width: 90%;
+    }
+    #somecolor {
+      background-color: #cccccc !important;
+    }
+    .ml-auto {
+      margin-left: 27px !important;
+    }
+  </style>
+
+  <body>
+
+    <nav class="navbar navbar-expand-sm">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="config.html">
+            <img
+              class="logo" src="{% static 'adminlogo.jpg'%}"
+  
+              style="height: 50px; width: 200px"
+            />
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section>
+      <div class="container"></div>
+    </section>
+    <br />
+    <section>
+      <div
+        id="textbox"
+        style="width: 90%; margin-left: auto; margin-right: auto"
+      >
+        <h4 style="text-align: center; color: #222222"><b>Invoice</b></h4>
+      </div>
+    </section>
+    <hr class="new1" />
+
+    <br />
+    <section>
+      <table
+        id="customers"
+        style="
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        <tr style="border: 2px solid black; padding: 8px">
+          <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+            <b>Invoice From</b>
+          </td>
+          <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+            <b>Invoice To</b>
+          </td>
+          <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+            <b>Customer Information</b>
+          </td>
+        </tr>
+        <tr style="border: 2px solid black; padding: 8px">
+          <td
+            contenteditable="true"
+            style="border: 2px solid black; padding: 8px"
+          >
+            <h6 style="text-transform: uppercase; text-align: center">
+              <b>Vizag Broadcasting Company pvt ltd</b>
+            </h6>
+            <h6 style="text-align: center">
+              #47-10-20,Flat No.401,4th floor,Dwaraka Plaza,<br />Dwaraka
+              Nagar,Visakhapatnam -<br />530016
+            </h6>
+            <h6 style="text-align: center">GSTIN:37AADCV9256F1ZZ</h6>
+            <h6 style="text-align: center">HSN Code:9984</h6>
+          </td>
+          <td
+            contenteditable="true"
+            style="border: 2px solid black; padding: 8px"
+          >
+            <h6 style="text-transform: uppercase; text-align: center">
+              {{customer_first_name}} {{customer_last_name}}
+            </h6>
+            <h6 style="text-transform: uppercase; text-align: center">
+              {{customer_hno}},{{customer_street}}<br />
+              {{customer_landmark}},{{customer_city}}<br/>
+              {{customer_district}},{{customer_state}}<br/>
+              {{customer_country}},{{customer_pincode}}<br/>
+            </h6>
+            <h6 style="text-align: center">
+              <b>Registered Mobile:</b>{{customer_mobile}}
+            </h6>
+          </td>
+          <td
+            contenteditable="true"
+            style="border: 2px solid black; padding: 8px"
+          >
+            <h6>Customer Id:{{customer_uid}}</h6>
+            <h6>Username: {{customer_username}}</h6>
+            <h6 style="text-align: center">Billing Date: {{plan_start_date}}</h6>
+            <h6 style="text-align: center">Due Date: {{plan_end_date}}</h6>
+            <h6 style="text-align: center">Billing Period: {{plan_start_date}} To {{plan_end_date}}</h6>
+            <h6 style="text-align: center"></h6>
+            <h6 style="text-align: center">
+            </h6>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <br />
+    <!-- 2nd table -->
+    <section>
+      <table
+        id="customers"
+        style="
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        <tr style="border: 2px solid black; padding: 8px">
+          <td colspan="4" style="text-align: left; border: 2px solid black; padding: 8px"><b>Invoice Breakup</b></td>
+        </tr>
+        <tr style="border: 2px solid black; padding: 8px">
+          <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+            <b>Description</b>
+          </td>
+          <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+            <b>Quantity</b>
+          </td>
+          <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+            <b>Unit Cost</b>
+          </td>
+          <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+            <b>Total</b>
+          </td>
+        </tr>
+        <tr>
+          <td
+            contenteditable="true"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+          {{plan_name}}
+          </td>
+          <td
+            contenteditable="true"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+            1
+          </td>
+          <td
+            contenteditable="true"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+          {{plan_cost}}
+          </td>
+          <td
+            contenteditable="true"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+          {{plan_cost}}
+          </td>
+        </tr>
+        <tr>
+          <td
+            contenteditable="true"
+            colspan="3"
+            style="text-align: right; border: 2px solid black; padding: 8px"
+          >
+            <b> CGST on {{plan_cost}}(+)</b>
+          </td>
+
+          <td
+            contenteditable="true"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+            {{plan_CGST}}
+          </td>
+        </tr>
+        <tr>
+          <td
+            contenteditable="true"
+            colspan="3"
+            style="text-align: right; border: 2px solid black; padding: 8px"
+          >
+            <b> SGST on {{plan_cost}}</b>
+          </td>
+
+          <td
+            contenteditable="true"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+            {{plan_SGST}}
+          </td>
+        </tr>
+        <tr>
+          <td
+            contenteditable="true"
+            colspan="3"
+            id="somecolor"
+            style="text-align: right; border: 2px solid black; padding: 8px"
+          >
+            <b>GRAND TOTAL</b>
+          </td>
+
+          <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+            <b>{{plan_total}}</b>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <br />
+    <!-- end -->
+    <section>
+      <table
+        id="customers"
+        style="
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        <tr>
+          <td
+            colspan="6"
+            style="text-align: left; border: 2px solid black; padding: 8px"
+          >
+            <b>Payments</b>
+          </td>
+        </tr>
+        <tr>
+          <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px; "
+          >
+            <b>Bill No</b>
+          </td>
+          <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px; "
+          >
+            <b>Payment Mode</b>
+          </td>
+          <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px; "
+          >
+            <b>Ref No</b>
+          </td>
+          <!-- <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px; "
+          >
+            <b>Notes</b>
+          </td> -->
+          <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px; "
+          >
+            <b>Notes</b>
+          </td>
+          <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px; "
+          >
+            <b>Paid Date</b>
+          </td>
+          <td
+            contenteditable="true"
+            id="somecolor"
+            style="text-align: center; border: 2px solid black; padding: 8px; "
+          >
+            <b>Paid Amount</b>
+          </td>
+        </tr>
+        <tr>
+          <td
+            contenteditable="true"
+            style="text-align: center; border: 2px solid black; padding: 8px;"
+          >
+            {{payment_id}}
+          </td>
+          <td
+            contenteditable="true"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+            {{payment_mode}}
+          </td>
+          <td
+            contenteditable="true"
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          >
+             
+          </td>
+          <td
+            style="text-align: center; border: 2px solid black; padding: 8px"
+          > </td>
+          <td style="text-align: center; border: 2px solid black; padding: 8px">
+            {{paid_date}}
+          </td>
+          <td style="text-align: center; border: 2px solid black; padding: 8px">
+            {{amount}}
+          </td>
+        </tr>
+      </table>
+    </section>
+    <br />
+    <hr class="new1" />
+
+    <br />
+    <section style="margin-left: 64px">
+      <p>1.GST NUMBER : 37AADCV9256F1ZZ</p>
+      <br />
+      <p style="text-align: center">
+        ***This is computer generated invoice.No signature required***
+      </p>
+      <p style="text-align: center">Thank you for your prompt payment.</p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+.export-dropdown :first-child {
+    display: inline-block !important;
+    border-radius: 0px;
+}
+
+.export-dropdown-list-container,
+.export-dropdown :nth-child(2) {
+    background-color: $white !important;
+    color: black !important;
+}
+
+.export-dropdown-list-container {
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.export-dropdown-list-container div:hover {
+    // background-color: #7366ff !important;
+    width: 100%;
+    cursor: pointer;
+}

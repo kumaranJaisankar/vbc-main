@@ -1,0 +1,178 @@
+{
+  "name": "cuba-react",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://dev.vbc.cloudtaru.com",
+  "dependencies": {
+    "@auth0/auth0-react": "^1.0.0",
+    "@emotion/styled": "^11.6.0",
+    "@fullcalendar/daygrid": "^5.1.0",
+    "@fullcalendar/timegrid": "^5.1.0",
+    "@material-ui/core": "^4.12.3",
+    "@mui/icons-material": "^5.2.5",
+    "@mui/lab": "^5.0.0-alpha.68",
+    "@mui/material": "^5.2.8",
+    "antd": "^4.19.2",
+    "apexcharts": "^3.15.2",
+    "axios": "^0.21.4",
+    "bootstrap-scss": "^4.5.0",
+    "britecharts-react": "^0.6.5",
+    "chart.js": "^2.9.3",
+    "chartist": "^0.11.4",
+    "check-password-strength": "^2.0.3",
+    "env-cmd": "^10.1.0",
+    "firebase": "^7.15.5",
+    "highcharts": "^10.3.1",
+    "highcharts-react-official": "^3.1.0",
+    "jspdf": "^2.4.0",
+    "jspdf-autotable": "^3.5.23",
+    "knob": "^1.1.0",
+    "leaflet": "^1.6.0",
+    "leaflet-draw": "^1.0.4",
+    "lodash.debounce": "^4.0.8",
+    "lodash.pick": "^4.4.0",
+    "mapbox-gl": "^2.15.0",
+    "moment": "^2.29.1",
+    "node-sass": "^4.14.1",
+    "rc-slider": "^10.0.0",
+    "react": "^17.0.2",
+    "react-apexcharts": "^1.3.6",
+    "react-big-calendar": "^0.26.0",
+    "react-blink-text": "^1.0.5",
+    "react-bootstrap": "^1.1.1",
+    "react-bootstrap-typeahead": "^5.1.0",
+    "react-chartist": "^0.14.3",
+    "react-chartjs-2": "^2.9.0",
+    "react-ckeditor-component": "^1.1.0",
+    "react-copy-to-clipboard": "^5.0.2",
+    "react-countdown": "^2.2.1",
+    "react-data-table-component": "^6.11.7",
+    "react-datepicker": "^3.0.0",
+    "react-dom": "^17.0.2",
+    "react-dragula": "^1.1.17",
+    "react-dropdown-tree-select": "^2.7.1",
+    "react-dropzone-uploader": "^2.11.0",
+    "react-feather": "^2.0.8",
+    "react-flow-renderer": "^9.6.7",
+    "react-google-charts": "^3.0.15",
+    "react-hook-form": "^6.0.1",
+    "react-image-lightbox": "^5.1.1",
+    "react-images-upload": "^1.2.8",
+    "react-input-mask": "^2.0.4",
+    "react-leaflet": "^3.1.0",
+    "react-leaflet-draw": "^0.19.8",
+    "react-loading-skeleton": "^2.2.0",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.1.2",
+    "react-select": "^5.1.0",
+    "react-signature-canvas": "^1.0.3",
+    "react-switch-lang": "^1.0.2",
+    "react-text-mask": "^5.4.3",
+    "react-time-picker": "^2.5.1",
+    "react-times": "^3.1.12",
+    "react-toastify": "^6.0.8",
+    "react-transition-group": "^4.4.1",
+    "react-vertical-timeline-component": "^3.0.2",
+    "react-webcam": "^5.2.4",
+    "reactstrap": "^8.5.1",
+    "recharts": "^2.1.11",
+    "reconnecting-websocket": "^4.4.0",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
+    "sass": "^1.51.0",
+    "styled-components": "^5.1.1",
+    "sweetalert2": "^9.15.2",
+    "voltage-breadcrumbs": "^1.1.2",
+    "xlsx": "^0.17.0"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "env-cmd -f .env.qa react-scripts start",
+    "build:dev": "env-cmd -f .env.development react-scripts --max_old_space_size=4096 build",
+    "build": "env-cmd -f .env.production react-scripts --max_old_space_size=4096 build",
+    "build:org": "env-cmd -f .env.org react-scripts --max_old_space_size=4096 build",
+    "build:qa": "env-cmd -f .env.gitam react-scripts --max_old_space_size=4096 build",
+    "build:enhancement": "env-cmd -f .env.enhancement react-scripts --max_old_space_size=4096 build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "resolutions": {
+    "react-dev-utils": "10.0.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "plugins": [
+      "jsx-a11y"
+    ],
+    "rules": {
+      "no-whitespace-before-property": "off"
+    },
+    "scripts": {
+      "analyze": "source-map-explorer 'build/static/js/*.js'",
+      "start": "env-cmd -f .env.local react-scripts start",
+      "build:dev": "env-cmd -f .env.development react-scripts --max_old_space_size=4096 build",
+      "build": "env-cmd -f .env.production react-scripts --max_old_space_size=4096 build",
+      "build:org": "env-cmd -f .env.org react-scripts --max_old_space_size=4096 build",
+      "build:qa": "env-cmd -f .env.qa react-scripts --max_old_space_size=4096 build",
+      "build:enhancement": "env-cmd -f .env.enhancement react-scripts --max_old_space_size=4096 build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "resolutions": {
+      "react-dev-utils": "10.0.0"
+    },
+    "eslintConfig": {
+      "extends": "react-app",
+      "plugins": [
+        "jsx-a11y"
+      ],
+      "rules": {
+        "no-whitespace-before-property": "off"
+      },
+      "overrides": [
+        {
+          "files": [
+            "*-index.js"
+          ],
+          "rules": {
+            "no-unused-expressions": "off"
+          }
+        }
+      ],
+      "reportUnusedDisableDirectives": true,
+      "noInlineConfig": true
+    },
+    "browserslist": {
+      "production": [
+        "defaults"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "moment": "^2.29.1",
+      "moment-timezone": "^0.5.31",
+      "react": "^17.0.1",
+      "react-dom": "^17.0.1"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "rc-steps": "^4.1.4"
+  }
+}

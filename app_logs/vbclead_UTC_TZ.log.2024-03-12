@@ -1,0 +1,4 @@
+2024-03-12 10:50:23.633366+05:30 sent the alert(0) message for 'VBC5001' is success
+2024-03-12 10:51:18.030205+05:30 sent the alert(0) message for 'VBC5001' is success
+2024-03-12 10:52:18.816782+05:30 sending the alert(0) message for VBC5001 is failed
+2024-03-12 10:53:16.672556+05:30 sending the alert(0) message for VBC5001 is failed{'code': 200, 'message': 'Message Submitted Successfully', 'data': {'message_id': 358116346, 'number': '919390470484'}}

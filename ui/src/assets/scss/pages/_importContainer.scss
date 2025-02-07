@@ -1,0 +1,87 @@
+.import-li .card-body{
+	box-shadow: 0 0 37px rgba(8, 21, 66, 0.1) !important;
+	left: 90px !important;
+}
+
+.import-container .selected{
+	    background-color: rgba(115, 102, 255, 0.1);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.file-content .btn svg {
+    stroke: currentColor !important;
+}
+
+.file-content{
+	text-align: center !important;
+	.media-body{
+		margin: 15px 0px;
+	}
+	a:hover{
+		color:#7366ff !important;
+	}
+}
+
+.file-content .file-info{
+		text-align: left;
+		margin-left: 25px;
+		color: gray;
+}
+.anchor-failed-file{
+	color:red !important;
+	cursor:pointer;
+}.import-li .card-body{
+	box-shadow: 0 0 37px rgba(8, 21, 66, 0.1) !important;
+	left: 90px !important;
+}
+
+.import-container .selected{
+	    background-color: rgba(115, 102, 255, 0.1);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.file-content .btn svg {
+    stroke: currentColor !important;
+}
+
+.file-content{
+	text-align: center !important;
+	.media-body{
+		margin: 15px 0px;
+	}
+	a:hover{
+		color:#7366ff !important;
+	}
+}
+
+.file-content .file-info{
+		text-align: center;
+		margin-left: 0px;
+		color: gray;
+}
+.anchor-failed-file{
+	color:red !important;
+	cursor:pointer;
+	// text-align: center !important;
+	margin-left: 72px;
+}
+
+.import-li .submenu-div{
+    width: 288px !important;
+}
+
+.import-container{
+    position: relative;
+    right: 136px;
+    top: -13px;
+}
+.row-success{
+	color:green;
+	text-align: center;
+}
+.row-fail{
+	color:red;
+	text-align: center;
+}

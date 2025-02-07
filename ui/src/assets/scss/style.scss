@@ -1,0 +1,434 @@
+/*! -----------------------------------------------------------------------------------
+
+    Template Name: Cuba Admin
+    Template URI: http://admin.pixelstrap.com/cuba/theme
+    Description: This is Admin theme
+    Author: Pixelstrap
+    Author URI: https://themeforest.net/user/pixelstrap
+
+-----------------------------------------------------------------------------------
+
+
+ */
+
+// *** utils ***
+@import "utils/variables";
+:root {
+    --theme-deafult: #1565c0 !important;
+    // --theme-deafult: #FFE1D0 !important;
+    // DC631F
+    // #42A8FC
+    --theme-secondary: #42A8FC !important;
+}
+
+// *** base ***
+@import "base/reset";
+@import "base/typography";
+//  *** components ***
+@import "components/according";
+@import "components/alert";
+@import "components/avatars";
+@import "components/badge";
+@import "components/bookmark";
+@import "components/breadcrumb";
+@import "components/builders";
+@import "components/buttons";
+@import "components/card";
+@import "components/color";
+@import "components/datepicker";
+@import "components/dropdown";
+@import "components/datatable";
+// @import "components/form-builder";
+@import "components/form-input";
+@import "components/form-wizard";
+@import "components/forms";
+// @import "components/form_builder-2";
+@import "components/icons";
+@import "components/list";
+@import "components/loader";
+@import "components/popover";
+@import "components/print";
+@import "components/radio";
+@import "components/ribbon";
+@import "components/switch";
+@import "components/tab";
+@import "components/table";
+@import "components/touchspin";
+@import "components/tour";
+@import "components/typeahead-search";
+@import "components/react-plugin";
+@import "components/slick.scss";
+@import "components/slick-theme.scss";
+//	*** pages ***
+@import "pages/blog";
+@import "pages/bookmark-app";
+@import "pages/cart";
+@import "pages/chart";
+@import "pages/chat";
+@import "pages/checkout";
+@import "pages/comingsoon";
+@import "pages/contacts";
+@import "pages/calendar";
+@import "pages/dashboard_2";
+@import "pages/dashboard_default";
+@import "pages/ecommerce";
+@import "pages/email-application";
+@import "pages/errorpage";
+@import "pages/faq";
+@import "pages/file";
+@import "pages/gallery";
+@import "pages/job-search";
+@import "pages/kanban";
+@import "pages/knowledgebase";
+@import "pages/language";
+@import "pages/learning";
+@import "pages/login";
+@import "pages/megaoption";
+@import "pages/order-history";
+@import "pages/page";
+@import "pages/pricing";
+@import "pages/progress";
+@import "pages/projectlist";
+@import "pages/social-app";
+@import "pages/task";
+@import "pages/timeline-v";
+@import "pages/timeliny";
+@import "pages/user-profile";
+@import "pages/wishlist";
+@import "pages/filterContainer";
+@import "pages/importContainer";
+@import "pages/leads";
+@import "pages/dashboard";
+
+// *** layout *** 
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/search";
+@import "layout/sidebar";
+@import "layout/rtl";
+@import "layout/box-layout";
+
+/* ---------------------
+	*** themes ***
+-----------------------*/
+
+@import "themes/dark";
+@import "themes/dark-sidebar";
+@import "themes/theme-customizer";
+@import "themes/responsive";
+
+// @import '../../../node_modules/rc-steps/assets/index.css';
+
+.role-details-page {
+    .disabled {
+        .btn {
+            background-color: #e9ecef;
+        }
+        pointer-events: none;
+    }
+}
+
+.input-field-error {
+    border: 2px solid red;
+}
+
+.input-field-error:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25) !important
+}
+
+.correact-lead-row-table tr td input {
+    width: 100px;
+}
+
+.showcard {
+    visibility: visible !important;
+    transition: 0.5s;
+    box-shadow: 0 0 37px rgba(8, 21, 66, 0.1);
+}
+
+.node__leaf > circle {
+	fill: green;
+	r: 10;
+  }
+
+  .leaflet-container {
+	 height: 400px;
+        width: 80%;
+        margin: 0 auto;
+  }
+
+  .parenttree {
+      height: auto;
+    .react-flow__node-default, .react-flow__node-input, .react-flow__node-output{
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        padding: 0px;
+        padding-top: 2px;
+            }
+g{
+    transform-origin: 0px 0px;
+}
+
+.react-flow__node-output{
+    border: none;
+    padding: 0px;
+    padding-top: 2px;
+}
+  }
+
+  .stepper div>div>div> a{
+    background: green;
+    color: white !important;
+    margin: 5px 5px 5px 130px;
+    margin-left: 39px !important;
+    // width: 30px;
+  }
+
+  
+  .stepper div>div>div> div:nth-child(2) {
+    background: green;
+    color: white !important;
+    margin: 5px;
+    // width: 30px;
+  }
+
+  .manage-permissions-tab{
+      li{
+        margin-left: 3px !important;
+      }
+  }
+
+  .ReactFlow-cntainer{
+    position: relative;
+    margin: auto;
+    width: 500px;
+    height: 400px;
+    .reactFlowdpe, .reactFlowCpe{
+        .react-flow__pane, .react-flow__renderer, .react-flow__selectionpane{
+            left: 0px !important;
+        }
+    }
+  }
+
+       .ReactFlowParentNode{
+        .parentBack {
+            // border-bottom: 30px solid #f0e9e9;
+            // border-left: 20px solid transparent;
+            // border-right: 20px solid transparent;
+            // height: 0px;
+            // width: 90px;
+
+                width:90px;
+                height:50px;
+                border:2px solid red;        
+                margin-left:100px;
+                margin-bottom: 0;
+                margin-top: 5px;
+                margin-top: 0;
+                border-top-width:4px;
+                border-bottom-width:1px;
+                -webkit-transform: perspective(200px) rotateX(60deg);  
+
+            text-align: center;
+            .parent-textwrapper{
+                width: 50px;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .parent-label{
+                max-width: 40px;
+                font-size: 8px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: inline-block;
+            }
+            .parent-icon{
+                width: 10px;
+                height: 10px;
+                margin-bottom: 5px;
+
+            }
+          }
+          .parentFront {
+            width: 90px;
+            background-color: transparent;
+            height: 25px;
+            border: 2px solid #726F6F;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            position: relative;
+            .colors, .values-wrapper{
+                // padding: 5px;
+                text-align: center;
+                padding-bottom: 0px;
+                height: 8px;
+                position: absolute;
+               
+            }
+            .colors{
+                top: -7px;
+                left: 29%;
+            }
+            .values-wrapper{
+                top: 4px;
+                padding: 0px;
+                left: 30%;
+                .availableValue, .unavailableValue{
+                    padding: 0px 6px;
+                    font-size: 6px;
+                }
+                .unavailableValue{
+                    padding-left: 5px;
+                }
+                .availableValue{
+                    padding-right: 3px;
+                }
+            }
+            .available, .unavailable, .selected{
+                height: 5px;
+                width: 6px;
+                border-radius: 50%;
+                display: inline-block;
+                margin: 0px 6px;
+            }
+            .available{
+                background-color: #726F6F;
+            }
+            .unavailable{
+                background-color: red;
+            }
+            .selected{
+                background-color: #51E239;
+            }
+           
+          }
+       }   
+
+       .customizer-contain-alloptical-expand{
+           .customizer-contain.open{
+            width: 90% !important;
+            overflow-y: scroll !important;
+            
+           }
+
+       }
+       .customizer-contain-alloptical-expand-stepper-section-show{
+           display: block;
+           margin-top: 45px;
+           padding: 5px;
+           overflow-y: scroll;
+        //    height: 500px;
+        height: auto;
+       }
+       .customizer-contain-alloptical-expand-stepper-section{
+           display: none;
+       }
+       .expand-icon-container{
+        position: absolute;
+        right: 20px;
+        margin: 10px;
+        z-index: 10000;
+       }
+       .expand-icon-container img{
+           float: right;
+           cursor: pointer;
+       }
+
+       .rc-steps-item{
+           .rc-steps-item-icon{
+            color: #fcc488;
+            background: #fcc488;
+            border-color: #fcc488;
+           }
+          
+       }
+       .rc-steps-item-finish, .rc-steps-item-active{
+        .rc-steps-item-icon{
+            color: #198c19;
+            background-color: #198c19 !important;
+            border-color: #198c19 !important;
+           }    
+    }
+
+    .rc-steps-item-process .rc-steps-item-icon > .rc-steps-icon{
+        color: #198c19 !important;
+    }
+
+    .parent-show-div{
+        text-align: center;
+        
+    position: absolute;
+    left: 42%;
+    top: -10%;
+    z-index: 1000;
+        .parent-btn{
+            width: 65px !important;
+    text-align: center !important;
+    padding: 3px;
+        }
+    }
+
+    .default-according.style-1 .parent-show-div .parent-btn{
+        text-align: center !important;
+    }
+    .step-description .step-span{
+        margin: 5px 0px;
+    }
+
+    .svg-dp-title-text{
+        width: 30px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .password-bad{
+        color: red;
+    }
+    .password-weak{
+        color: rgb(250, 186, 9);
+    }
+    .password-medium{
+        color: rgb(5, 82, 126);
+    }
+    .password-strong{
+        color: green;
+    }
+
+    .password-notes ul{
+        margin-left: 40px;
+        list-style-type: disc;
+    }
+    .password-error{
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    .page-wrapper .page-header .header-wrapper .nav-right > ul{
+        margin-bottom: 0px;
+    }
+
+    .react-datepicker .react-datepicker__day--today,.react-datepicker__day--keyboard-selected{
+        background-color: white !important;
+    color: black !important;
+    }
+    .blink{
+        color: red !important;
+        margin-left: 3px;
+    }
+
+    .ellipsis {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #map {
+      display: none;
+    }
+
+    .Mui-expanded {
+      margin-bottom: 10px;
+    }

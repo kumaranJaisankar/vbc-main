@@ -1,0 +1,130 @@
+.stepper-wrapper-horizontal {
+    display: flex;
+    justify-content: space-between;
+
+    .step-wrapper {
+        width: 23%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .step-number {
+        border-radius: 50%;
+        border: 5px solid var(--theme-deafult);
+        position: relative;
+        width: 40px;
+        height: 40px;
+        padding-right: 0.10rem;
+        font-size: x-large;
+        // padding-top: 0.5rem;
+        text-align: center;
+        margin-bottom: 1.2rem;
+    }
+
+    .divider-line {
+        height: 1px;
+        background-color: #bdbdbd;
+        position: absolute;
+        top: 30%;
+        left: 70%
+    }
+
+    .divider-line-2 {
+        width: 296%
+    }
+
+    .divider-line-3 {
+        width: 125%
+    }
+
+    .divider-line-4 {
+        width: 70%
+    }
+
+    .divider-line-5 {
+        width: 60%
+    }
+}
+
+.stepper-wrapper-vertical {
+    .step-wrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.2rem;
+        position: relative;
+    }
+
+    .step-number {
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        padding: 4.5px 4px 4px;
+        text-align: center;
+        font-size: 95%;
+    }
+
+    .step-description {
+        margin-left: 1.2rem;
+        padding-bottom: 3px;
+    }
+
+    .divider-line {
+        height: 20px;
+        width: 1px;
+        background-color: #bdbdbd;
+        position: absolute;
+        top: 100%;
+        left: 6.4%
+    }
+}
+
+.step-number-selected {
+    // background: var(--theme-deafult) !important;
+    border: 1px solid #bdbdbd;
+    color: #fff;
+
+}
+
+.step-number-completed {
+    background: #258925 !important;
+    border: 5px solid #258925 !important;
+    color: #fff;
+}
+
+.step-number-disabled {
+    border: 1px solid #838383
+}
+
+.step-description-active {
+    font-weight: bold;
+    color:var(--theme-deafult);
+}
+
+.step-description-position-top {
+    position: absolute !important;
+    bottom: 80px !important;
+    font-size: large;
+}
+
+.step-description-completed{
+    color: #258925;
+    font-weight: bold;
+}
+
+.divider-completed {
+    background-color: #258925 !important;
+}
+
+.step-selected-radio{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--theme-deafult);
+}

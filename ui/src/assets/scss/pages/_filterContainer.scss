@@ -1,0 +1,65 @@
+.submenu-div{
+	width: 270px !important;
+}
+
+.bottom-buttons {
+	text-align: center;
+	.btn-light{
+		margin-right:10px;
+		}
+}
+
+.date-picker-for-filter .react-datepicker-wrapper{
+	width: 120px
+}
+
+.filter-clear-text{
+	cursor: pointer;
+}
+
+.filter-clear-text:hover{
+	color:white !important;
+}
+
+// css added by Marieya
+.selected-options1{
+	z-index: 100;
+    position: absolute;
+    left: -54rem;
+    top: 38px;
+}
+
+.selected-options-franchise{
+	z-index: 2;
+    position: absolute;
+    left: -70rem;
+    top: 38px;
+}
+
+.selected-options{
+    z-index: 100;
+    position: absolute;
+    left: -350px;
+    top: 85px;
+
+	.row{
+		.rbt{
+			width: 500px;
+			.rbt-input-multi{
+				border: 0;
+				background: transparent;
+				box-shadow: none;
+			}
+		}
+
+		.clear-text{
+			// position: absolute;
+			// right: -70px;
+			padding-top: 3px;
+		}
+	}
+}
+
+.selected-options .row .rbt .rbt-input-multi{
+	display:contents;
+}
